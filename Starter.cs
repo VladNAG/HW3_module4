@@ -18,15 +18,29 @@ namespace HW3_module4
                 // создаем два объекта User
                 Console.WriteLine("Created");
 
-                /*var users = db.Clients.ToList();
+                var users = db.Clients.ToList();
                 Console.WriteLine("LIst Obects:");
                 foreach (Client u in users)
                 {
                     Console.WriteLine($"{u.FirstName}.{u.LastName} --{u.Country}-{u.ClientId}");
-                }*/
+                }
             }
 
-            Console.Read();
+            using (CompaniContext db = new CompaniContext())
+            {
+                /*db.Database.EnsureDeleted();
+                db.Database.EnsureCreated();*/
+
+                // создаем два объекта User
+                Console.WriteLine("Created");
+
+                var users = db.Clients.ToList();
+                Console.WriteLine("LIst Obects:");
+                foreach (Client u in users)
+                {
+                    Console.WriteLine($"{u.FirstName}.{u.LastName} --{u.Country}-{u.ClientId}");
+                }
+            }
         }
     }
 }

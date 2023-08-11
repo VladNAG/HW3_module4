@@ -13,6 +13,6 @@ namespace HW3_module4
         public string LastName { get; set; }
         public string Country { get; set; }
         public int Age { get; set; }
-        public List<Project> Projects { get; set; } = new List<Project>();
+        public virtual List<Project> Projects { get; set; } = new List<Project>();
     }
 }
