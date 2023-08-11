@@ -23,6 +23,7 @@ namespace HW3_module4
             builder.AddJsonFile("appsettings.json");
             var config = builder.Build();
             optionsBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection"));
+            optionsBuilder.UseLazyLoadingProxies();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

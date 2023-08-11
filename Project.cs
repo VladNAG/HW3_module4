@@ -15,8 +15,8 @@ namespace HW3_module4
         [Column(TypeName="money")]
         public decimal Budget { get; set; }
         public DateTime StartDate { get; set; }
-        public List<EmployeeProject> EmployeeProjects { get; set; } = new List<EmployeeProject>();
+        public virtual List<EmployeeProject> EmployeeProjects { get; set; } = new List<EmployeeProject>();
         public int? ClientId { get; set; }
-        public Client Client { get; set; }
+        public virtual Client Client { get; set; }
     }
 }
