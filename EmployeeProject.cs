@@ -10,6 +10,8 @@ namespace HW3_module4
 {
     public class EmployeeProject
     {
+        public int EmployeeProjectId { get; set; }
+
         [Column(TypeName = "money")]
         public decimal Rate { get; set; }
         public DateTime StartDate { get; set; }
