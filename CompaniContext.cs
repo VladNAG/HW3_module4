@@ -15,6 +15,7 @@ namespace HW3_module4
         public DbSet<Project> Projects { get; set; }
         public DbSet<Title> Titles { get; set; }
         public DbSet<EmployeeProject> EmployeeProjects { get; set; }
+        public DbSet<Client> Clients { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var builder = new ConfigurationBuilder();
@@ -27,9 +28,10 @@ namespace HW3_module4
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
-            modelBuilder.ApplyConfiguration(new ProjectConfiguration());
+            modelBuilder.ApplyConfiguration(new EmployeeProjectConfiguration());
             modelBuilder.ApplyConfiguration(new TitleConfiguration());
             modelBuilder.ApplyConfiguration(new OfficeConfiguration());
+            modelBuilder.ApplyConfiguration(new ClientConfiguration());
             modelBuilder.ApplyConfiguration(new ProjectConfiguration());
         }
     }
