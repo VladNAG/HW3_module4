@@ -2,9 +2,9 @@
 {
     internal class Program
     {
-       public static Task Main(string[] args)
+        static void Main(string[] args)
         {
-          return Starter.Start();
+            Console.WriteLine("Hello, World!");
         }
     }
 }
