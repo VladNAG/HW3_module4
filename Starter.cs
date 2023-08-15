@@ -41,7 +41,7 @@ namespace HW3_module4
                 Console.WriteLine("LIst Obects:");
                 foreach (Office u in users)
                 {
-                    Console.WriteLine($"{u.OfficeId}.{u.Ttitle} - {u.Location}-");
+                    Console.WriteLine($"{u.OfficeId}.{u.Ttitle} - {u.Location}");
                 }
             }
 
