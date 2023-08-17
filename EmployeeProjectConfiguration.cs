@@ -12,6 +12,7 @@ namespace HW3_module4
     {
         public void Configure(EntityTypeBuilder<EmployeeProject> builder)
         {
+            builder.Property(t => t.EmployeeProjectId).HasColumnName("EmployeeProjectId");
             builder.Property(f => f.Rate).HasColumnName("Rate");
             builder.Property(f => f.StartDate).HasColumnName("StartDate").HasMaxLength(7);
             builder.HasKey(t => new { t.EmployeeId, t.ProjectId });
